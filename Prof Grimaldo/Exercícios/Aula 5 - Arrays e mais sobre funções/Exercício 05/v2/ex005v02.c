@@ -1,13 +1,28 @@
+/*************************************************************************************************
+* Data: 14/09/2025                                                                               *
+* Exercício: 005 da Aula 5 - Arrays e mais sobre funções                                         *
+* Instituição de Ensino: UNEB                                                                    *
+* Disciplina: Linguagem C                                                                        *
+* Professor: José Grimaldo                                                                       *
+* Aluno: D. K. Mariano                                                                           *
+* Descrição: Escreva um programa que mescle dois arrays em um único array.                       *
+* Instruções:                                                                                    *
+*     - Defina dois arrays de inteiros.                                                          *
+*     - Escreva uma função void mesclaArrays(int arr1[], int tamanho1, int arr2[], int tamanho2, *
+*       int resultado[]) que mescle arr1 e arr2 em resultado.                                    *
+*     - Na função main(), chame mesclaArrays() e imprima o array resultante.                     *
+*************************************************************************************************/
+
 #include <stdio.h>
 #include <locale.h>
 
 int define_tamanho(){
     int tamanho = 0;
     do{
-        printf("\nQual � o tamanho do array? ");
+        printf("\nQual é o tamanho do array? ");
         scanf("%d", &tamanho);
         if(tamanho <= 0){
-            printf("\nQual � o tamanho do array? ");
+            printf("\nQual é o tamanho do array? ");
         }
 
     }while(tamanho <= 0);
@@ -54,21 +69,21 @@ int main(void){
     int tamanho1 = 0;
     int tamanho2 = 0;
 
-    printf("\n===== 1� Array (arr1): =====");
+    printf("\n===== 1º Array (arr1): =====");
     tamanho1 = define_tamanho();
     int arr1[tamanho1];
 
     for(int i = 0; i < tamanho1; i++){
-        printf("\nDigite o %d� elemento do array: ", i + 1);
+        printf("\nDigite o %dº elemento do array: ", i + 1);
         scanf("%d", &arr1[i]);
     }
 
-    printf("\n===== 1� Array (arr1): =====");
+    printf("\n===== 1º Array (arr1): =====");
     tamanho2 = define_tamanho();
     int arr2[tamanho2];
 
     for(int i = 0; i < tamanho2; i++){
-        printf("\nDigite o %d� elemento do array: ", i + 1);
+        printf("\nDigite o %dº elemento do array: ", i + 1);
         scanf("%d", &arr2[i]);
     }
 
@@ -92,3 +107,4 @@ int main(void){
     return 0;
 
 }
+
